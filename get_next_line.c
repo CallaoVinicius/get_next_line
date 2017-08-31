@@ -59,7 +59,7 @@ int		get_next_line(const int fd, char **line)
 	if (tmp && ft_strlen(tmp))
 	{
 		s = ft_strdup(tmp);
-		free(tmp);
+		ft_strdel(&tmp);
 		if (ft_strchr(s, 10))
 		{
 			tmp = ft_strdup(ft_strchr(s, 10) + 1);
